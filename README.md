@@ -15,9 +15,9 @@ You Can Download Python 2.7 at the following [link](https://www.python.org/downl
 - **Leet Hacker Hash:** ece4bb07f2580ed8b39aa52b7f7f918e43033ea1 **(Salt Term:)** f0744d60dd500c92c0d37c16174cc58d3c4bdd8e
 
 ## Password Answers(Number of Password Viewed before answer)
-- **Test Program Hash:** 
-- **Medium Hacker Hash:**
-- **Leet Hacker Hash:**
+- **Test Program Hash:**  letmein(15)
+- **Medium Hacker Hash:**  vjhtrhsvdctcegth(999967)
+- **Leet Hacker Hash:** harib(546154)
 
 ## Getting Started(Running the program)
 #### Windows
@@ -25,3 +25,14 @@ You Can Download Python 2.7 at the following [link](https://www.python.org/downl
 C:<The path to where your file is> python hashcrack.py arg1
 C:<The path where your file is> python hashcrack.py arg1 arg2
 ``` 
+-Arg1 would be the hash that we are finding
+-Arg2 would be in cases that we have a salted hash
+
+### MAC
+```
+cd /location of file/
+python hashcrack.py arg1 
+python hashcrack.py arg1 arg2
+```
+-Arg1 would be the hash that we are finding
+-Arg2 would be in cases that we have a salted hash
