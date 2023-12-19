@@ -21,8 +21,7 @@ def crack():
     passwords = str(urllib.urlopen('https://raw.githubusercontent.com/danielmiessler/SecLists/master/Passwords/Common-Credentials/10-million-password-list-top-1000000.txt').read())
     for paws in passwords.split('\n'):
 
-        guess = hashlib.sha1(bytes(paws)).hexdigest()
-        if guess == sys.argv[1]:
+        if (guess := hashlib.sha1(bytes(paws)).hexdigest()) == sys.argv[1]:
             return "The password is " + str(paws) +"\nWe went through "+str(count)+" passwords"
             print(count)
             quit()
@@ -34,8 +33,7 @@ def salt():
     correct = ""
     passwords = str(urllib.urlopen('https://raw.githubusercontent.com/danielmiessler/SecLists/master/Passwords/Common-Credentials/10-million-password-list-top-1000000.txt').read())
     for paws in passwords.split('\n'):
-        guess = hashlib.sha1(paws).hexdigest()
-        if guess == sys.argv[2]:
+        if (guess := hashlib.sha1(paws).hexdigest()) == sys.argv[2]:
             correct = str(paws)
             print(correct)
     for paws in passwords.split('\n'):
@@ -57,9 +55,8 @@ def gradproblem():
     Passwords = str(urlopen('https://raw.githubusercontent.com/danielmiessler/SecLists/master/Passwords/Common-Credentials/10-million-password-list-top-1000000.txt').read(),'utf-8') 
     for paws in Passwords.split('\n'):
         for space in Passwords.split('\n'):
-            guess = hashlib.sha1(bytes(paws+blank+space,'utf_8')).hexdigest()
             #guess2 = hashlib.sha1(bytes(space+blank+paws,'utf_8')).hexdigest()
-            if guess == grad:
+            if (guess := hashlib.sha1(bytes(paws+blank+space,'utf_8')).hexdigest()) == grad:
                 print(paws)
                 quit()
            # elif guess2 == grad:
